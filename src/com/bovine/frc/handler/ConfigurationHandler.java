@@ -1,23 +1,28 @@
 package com.bovine.frc.handler;
 
-import com.bovine.frc.config.Configuration;
-import com.bovine.frc.init.Settings;
-import com.bovine.frc.reference.Controller;
 import com.bovine.frc.reference.Reference;
-
-import java.util.Vector;
 
 public class ConfigurationHandler
 {
-   public void init() {
+   public static void init() {
+       if(FileHandler.createFile(Reference.CONFIGURATION_FILE)) {       //File does not exist
+           loadDefaults();
+       } else {
+           loadCustom();
+       }
 
+       save();
    }
 
-    public void load() {
+    public static void loadDefaults() {
 
     }
 
-    public void save() {
+    public static void loadCustom() {
+
+    }
+
+    public static void save() {
 
     }
 }

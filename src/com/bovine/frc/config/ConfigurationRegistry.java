@@ -1,5 +1,7 @@
 package com.bovine.frc.config;
 
+import com.bovine.frc.handler.ConfigurationHandler;
+
 import java.util.Vector;
 
 public class ConfigurationRegistry
@@ -8,6 +10,7 @@ public class ConfigurationRegistry
 
     public static void init() {
         registry = new Vector();
+        ConfigurationHandler.init();
     }
 
     public static Configuration getConfiguration(String name) {

@@ -1,5 +1,9 @@
 package com.bovine.frc;
 
+import com.bovine.frc.config.ConfigurationRegistry;
+import com.bovine.frc.handler.ConfigurationHandler;
+import com.bovine.frc.init.MotorControllers;
+import com.bovine.frc.init.Pneumatics;
 import edu.wpi.first.wpilibj.SimpleRobot;
 
 public class Robot extends SimpleRobot
@@ -17,6 +21,9 @@ public class Robot extends SimpleRobot
     protected void robotInit()
     {
         super.robotInit();
+        MotorControllers.init();
+        Pneumatics.init();
+        ConfigurationRegistry.init();
     }
 
     /**
