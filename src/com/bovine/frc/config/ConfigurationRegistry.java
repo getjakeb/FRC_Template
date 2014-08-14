@@ -20,22 +20,50 @@ public class ConfigurationRegistry
             config = (Configuration) registry.get(i);
 
             if(config.getName().equals(name)) {
-                return config;
+                return new Configuration(config);
             }
         }
 
         return null;
     }
 
-    public static void addConfiguration(Configuration config) {
-        if(getConfiguration(config.getName()) == null) {
-            registry.add(config);
+    public static boolean addConfiguration(Configuration config) {
+        if(!doesConfigurationExist(config.getName())) {
+            registry.add(new Configuration(config));
+            return true;
         }
+
+        return false;
     }
 
-    public static void editConfiguation(String name, int value) {
-        getConfiguration(name).setValue(value);
+    public static boolean addConfiguration(String name, int value) {
+        if(!doesConfigurationExist(name)) {
+            registry.add(new Configuration(name, value));
+            return true;
+        }
+
+        return false;
     }
 
+    public static boolean editConfiguation(String name, int value) {
+        if(doesConfigurationExist(name)) {
+            getConfiguration(name).setValue(value);
+            return true;
+        }
+        return false;
+    }
 
+    public static boolean doesConfigurationExist(String name) {
+        return getConfiguration(name) == null;
+    }
+
+    public static String getRegistry() {
+        String out = "";
+
+        for(int i = 0; i < registry.size(); i++) {
+            out += registry.get(i).toString() + "\n";
+        }
+
+        return out;
+    }
 }
