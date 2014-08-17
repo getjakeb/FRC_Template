@@ -3,7 +3,6 @@ package com.bovine.frc.handler;
 import com.bovine.frc.config.ConfigurationRegistry;
 import com.bovine.frc.reference.Controller;
 import com.bovine.frc.reference.Reference;
-import com.bovine.frc.util.ConfigurationHelper;
 import com.bovine.frc.util.StringHelper;
 
 import java.util.Vector;
@@ -35,7 +34,8 @@ public class ConfigurationHandler
             if(StringHelper.isNumeric(valueRaw)) {
                 value = Integer.valueOf(valueRaw);
             } else {
-                value = ConfigurationHelper.getValueFromString(valueRaw);
+                //Determine which value valueRaw represents
+                value = Controller.getValueFromString(valueRaw);
             }
             ConfigurationRegistry.addConfiguration(name, value);
         }

@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="FIRST" level="project" />
+    <orderEntry type="library" name="squawk" level="project" />
   </component>
 </module>
 

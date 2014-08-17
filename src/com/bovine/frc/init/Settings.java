@@ -4,6 +4,7 @@ import com.bovine.frc.config.ConfigurationRegistry;
 
 public class Settings
 {
+
     public void init() {
         ConfigurationRegistry.init();
     }
