@@ -1,17 +1,13 @@
 package com.bovine.frc.handler;
 
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.HashMap;
-import java.util.Vector;
 
 import javax.microedition.io.Connector;
 
 import com.sun.squawk.io.BufferedReader;
 import com.sun.squawk.microedition.io.FileConnection;
-
 
 public class FileHandler
 {
@@ -85,5 +81,9 @@ public class FileHandler
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void appendToFile(String file, String message) {
+        writeToFile(file, getFileContents(file) + message);
     }
 }
