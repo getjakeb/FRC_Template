@@ -22,13 +22,13 @@ public class Logger
         this(name, Level.DEBUG);
     }
 
-    public Logger(Level minLevel) {
-        this("Global", minLevel);
+    public Logger(String nam, Level minimumLevel) {
+        this.name = nam.toUpperCase();
+        this.level = minimumLevel;
     }
 
-    public Logger(String nam, Level minimumLevel) {
-        this.name = nam;
-        this.level = minimumLevel;
+    public String getName() {
+        return this.name;
     }
 
     public void setMinimumLogLevel(Level minimumLevel) {
@@ -49,8 +49,9 @@ public class Logger
         }
 
         Date current = new Date(System.currentTimeMillis());
+        String time = StringHelper.getTime(current);
 
-        String log = current.toString() + " [" + className + " : " + level.name() + "] \t" + message;
+        String log = "[" + time + "] [" + this.name + "/" + level.name() + "] [" + className + "]: " + message;
 
         System.out.println(log);
         FileHandler.appendToFile(file, "\n" + log);
@@ -67,4 +68,10 @@ public class Logger
     public void log(Level level, String format, Object... data) {
         log(level, "Unknown", StringHelper.format(format, data));
     }
+
+    private void createFile() {
+        this.file = this.name + "-" + FileHandler.getNextNumber(this.name);
+        FileHandler.createFile(this.file);
+    }
+
 }

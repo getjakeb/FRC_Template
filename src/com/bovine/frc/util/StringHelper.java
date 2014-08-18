@@ -1,5 +1,8 @@
 package com.bovine.frc.util;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
 import java.util.Vector;
 
 public class StringHelper
@@ -72,5 +75,21 @@ public class StringHelper
         array.copyInto(out);
 
         return out;
+    }
+
+    public static String getDate(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DATE);
+
+        return month + "/" + day + "/" + year;
+    }
+
+    public static String getTime(Date date) {
+        String dat = date.toString();
+        return dat.substring(dat.indexOf(':') - 2, dat.lastIndexOf(':') + 3);
     }
 }

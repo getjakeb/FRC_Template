@@ -17,7 +17,7 @@ public class ConfigurationRegistry
         Configuration config;
 
         for(int i = 0; i < registry.size(); i++) {
-            config = (Configuration) registry.get(i);
+            config = (Configuration) registry.elementAt(i);
 
             if(config.getName().equals(name)) {
                 return new Configuration(config);
@@ -29,7 +29,7 @@ public class ConfigurationRegistry
 
     public static boolean addConfiguration(Configuration config) {
         if(!doesConfigurationExist(config.getName())) {
-            registry.add(new Configuration(config));
+            registry.addElement(new Configuration(config));
             return true;
         }
 
@@ -38,7 +38,7 @@ public class ConfigurationRegistry
 
     public static boolean addConfiguration(String name, int value) {
         if(!doesConfigurationExist(name)) {
-            registry.add(new Configuration(name, value));
+            registry.addElement(new Configuration(name, value));
             return true;
         }
 
@@ -61,7 +61,7 @@ public class ConfigurationRegistry
         String out = "";
 
         for(int i = 0; i < registry.size(); i++) {
-            out += registry.get(i).toString() + "\n";
+            out += registry.elementAt(i).toString() + "\n";
         }
 
         return out;

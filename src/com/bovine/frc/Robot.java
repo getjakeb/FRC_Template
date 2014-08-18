@@ -37,6 +37,7 @@ public class Robot extends SimpleRobot
     protected void disabled()
     {
         super.disabled();
+        ConfigurationHandler.loadCustom();
     }
 
     /**

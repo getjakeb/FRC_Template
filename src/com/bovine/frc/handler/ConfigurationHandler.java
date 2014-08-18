@@ -13,15 +13,13 @@ public class ConfigurationHandler
    public static void init() {
        if(FileHandler.createFile(Reference.CONFIGURATION_FILE)) {       //File does not exist
            loadDefaults();
+           save();
        } else {
            loadCustom();
        }
-
-       save();
    }
 
     public static void loadDefaults() {
-
     }
 
     public static void loadCustom() {
@@ -39,6 +37,8 @@ public class ConfigurationHandler
             }
             ConfigurationRegistry.addConfiguration(name, value);
         }
+
+        save();
     }
 
     public static void save() {
