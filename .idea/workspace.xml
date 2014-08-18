@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24afc492-704f-4e4b-9275-406c10a4c399" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bovine/frc/logging/LogFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bovine/frc/handler/ConfigurationHandler.java" afterPath="$PROJECT_DIR$/src/com/bovine/frc/handler/ConfigurationHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bovine/frc/config/ConfigurationRegistry.java" afterPath="$PROJECT_DIR$/src/com/bovine/frc/config/ConfigurationRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bovine/frc/handler/FileHandler.java" afterPath="$PROJECT_DIR$/src/com/bovine/frc/handler/FileHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bovine/frc/logging/Logger.java" afterPath="$PROJECT_DIR$/src/com/bovine/frc/logging/Logger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bovine/frc/reference/Reference.java" afterPath="$PROJECT_DIR$/src/com/bovine/frc/reference/Reference.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bovine/frc/Robot.java" afterPath="$PROJECT_DIR$/src/com/bovine/frc/Robot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bovine/frc/util/StringHelper.java" afterPath="$PROJECT_DIR$/src/com/bovine/frc/util/StringHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DefensiveBot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,8 +73,8 @@
       <file leaf-file-name="Robot.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bovine/frc/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66258353" vertical-offset="0" max-vertical-offset="1207">
-              <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.43541202" vertical-offset="204" max-vertical-offset="1122">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1108,8 +1100,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bovine/frc/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66258353" vertical-offset="0" max-vertical-offset="1207">
-          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.43541202" vertical-offset="204" max-vertical-offset="1122">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
