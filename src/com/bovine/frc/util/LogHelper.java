@@ -5,9 +5,15 @@ import com.bovine.frc.logging.Logger;
 
 public class LogHelper
 {
+    private static Logger logger;
+
+    public static void init() {
+        logger = new Logger("General", Level.ALL);
+    }
+
     private static void log(String className, Level logLevel, Object object)
     {
-        Logger.log(logLevel, className, String.valueOf(object));
+        logger.log(logLevel, className, String.valueOf(object));
     }
 
     public static void info(Object object)
@@ -52,22 +58,12 @@ public class LogHelper
 
     public static void warn(Object object)
     {
-        log("Global", Level.WARNING, object);
+        log("Global", Level.WARN, object);
     }
 
     public static void warn(Class c, Object object)
     {
-        log(c.getName(), Level.WARNING, object);
-    }
-
-    public static void severe(Object object)
-    {
-        log("Global", Level.SEVERE, object);
-    }
-
-    public static void severe(Class c, Object object)
-    {
-        log(c.getName(), Level.SEVERE, object);
+        log(c.getName(), Level.WARN, object);
     }
 
     public static void fatal(Object object)
