@@ -57,6 +57,14 @@ public class Logger
         FileHandler.appendToFile(file, "\n" + log);
     }
 
+    public void log(Level level, String className, Object object) {
+        log(level, className, String.valueOf(object));
+    }
+
+    public void log(Level level, Object object) {
+        log(level, "Unknown", String.valueOf(object));
+    }
+
     public void log(Level level, String className, String format, Object... data) {
         log(level, className, StringHelper.format(format, data));
     }
